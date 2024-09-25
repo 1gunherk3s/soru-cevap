@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Security.Cryptography.X509Certificates;
 
 
 namespace sorycevap
@@ -20,6 +21,32 @@ namespace sorycevap
         }
 
         SqlConnection baglan = new SqlConnection("Data Source=Billie\\SQLEXPRESS;Initial Catalog=SoruCevap;Integrated Security=True");
+
+        public void erisilebilirlikkapali()
+        {
+            button4.Enabled = false;
+            button3.Enabled = false;
+            richTextBox1.Enabled = false;
+            textBox1.Enabled = false;
+            textBox2.Enabled = false;
+            textBox3.Enabled = false;
+            textBox4.Enabled = false;
+            textBox5.Enabled = false;
+        }
+
+        public void erisilebilirlikacik()
+        {
+            button4.Enabled = true;
+            button3.Enabled = true;
+            richTextBox1.Enabled = true;
+            textBox1.Enabled = true;
+            textBox2.Enabled = true;
+            textBox3.Enabled = true;
+            textBox4.Enabled = true;
+            textBox5.Enabled = true;
+        }
+
+
 
         private void Form3_Load(object sender, EventArgs e)
         {
@@ -35,6 +62,7 @@ namespace sorycevap
                     column.Visible = false;
                 }
             }
+
 
 
             DataTable dt1 = new DataTable();
@@ -111,10 +139,12 @@ namespace sorycevap
                 textBox2.Text = dataGridView2.Rows[secilen].Cells[3].Value.ToString();
                 textBox4.Text = dataGridView2.Rows[secilen].Cells[4].Value.ToString();
                 textBox5.Text = dataGridView2.Rows[secilen].Cells[5].Value.ToString();
+                erisilebilirlikacik();
             }
             else
             {
                 MessageBox.Show("Seçtiğiniz cevap, ilgili soruya ait değildir!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                erisilebilirlikkapali();
                 return;
             }
             
