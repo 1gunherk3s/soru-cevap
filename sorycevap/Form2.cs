@@ -42,7 +42,6 @@ namespace sorycevap
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            ToolTip yazdir = new ToolTip();
             toolTip1.SetToolTip(button1, "Soru cevaplama ekranına gider");
             toolTip2.SetToolTip(button2, "Soru yazma ekranına gider");
         }

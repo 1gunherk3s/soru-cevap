@@ -5,6 +5,11 @@ VisualStudioVersion = 17.11.35208.52
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sorucevap", "sorycevap\sorucevap.csproj", "{44F95E72-6CDF-4B26-B347-FEE9091C8A5C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "veritabani", "veritabani", "{DB991600-2440-447E-A827-213B39A928D7}"
+	ProjectSection(SolutionItems) = preProject
+		..\veritabani.sql = ..\veritabani.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
