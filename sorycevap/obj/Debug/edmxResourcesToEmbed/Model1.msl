@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SoruCevapModelStoreContainer" CdmEntityContainer="SoruCevapEntities1">
+    <EntitySetMapping Name="tblcevap">
+      <EntityTypeMapping TypeName="SoruCevapModel.tblcevap">
+        <MappingFragment StoreEntitySet="tblcevap">
+          <ScalarProperty Name="CevapID" ColumnName="CevapID" />
+          <ScalarProperty Name="CevapA" ColumnName="CevapA" />
+          <ScalarProperty Name="CevapB" ColumnName="CevapB" />
+          <ScalarProperty Name="CevapC" ColumnName="CevapC" />
+          <ScalarProperty Name="CevapD" ColumnName="CevapD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblsoru">
+      <EntityTypeMapping TypeName="SoruCevapModel.tblsoru">
+        <MappingFragment StoreEntitySet="tblsoru">
+          <ScalarProperty Name="SoruID" ColumnName="SoruID" />
+          <ScalarProperty Name="Soru" ColumnName="Soru" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
